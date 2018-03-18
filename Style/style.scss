@@ -1,0 +1,720 @@
+$primary:#c19387;
+$secondary:rgba(255,215,0,0.9);
+$thirdcolor:rgba(255,228,225,0.8);
+
+@import "setup";
+
+html {
+	font-size:62.5%;
+}
+body {
+	
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin:0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+main {
+	background:$thirdcolor;
+}
+
+// Font styling 
+p {
+	font-size:1.6rem;
+	font-family:'Lora', sans-serif;
+	font-style:italic;
+	font-weight:800;
+}
+
+h1 {
+	font-family:'Great Vibes', sans-serif;
+	font-size: 6rem;
+	color:$secondary;
+	margin:0;
+	letter-spacing: 2px;
+	text-shadow:2px 2px black;
+}
+h2 {
+	font-size:3.5rem;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-family:'Oswald', sans-serif;
+	font-weight:400;
+	color:rgb(255,105,180);
+	text-shadow:1px 1px black;
+}
+
+h3 {
+	font-size:2.2rem;
+	font-family:'Lora', sans-serif;
+	font-weight:bold;
+	color:$secondary;
+	text-shadow:2px 2px black;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size:1.8rem;
+	font-family:'Lora', sans-serif;
+	color:lightblue;
+	font-weight:bolder;
+	margin:0;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px black;
+	letter-spacing:1px;
+}
+
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+
+// Font styling ends
+
+
+// Button/CTA Styling 
+.booking {
+	margin-top:20px;
+	border:1px solid black;
+	background:$primary;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:25%;
+	float:right;
+	a {
+	font-size:1.8rem;
+	font-weight:bold;
+	padding:20px 10px;
+	text-transform:uppercase;
+	color:white;
+	letter-spacing: 1px;
+	text-shadow:1px 2px black;
+	text-align:center;
+	}
+}
+
+.button{
+	display:inline-block;
+	padding:20px 25px;
+	border:1px solid black;
+	background:#24292d;
+	a {
+		color:$secondary;
+		text-transform: uppercase;
+		font-size:1.8rem;
+	}
+}
+
+.button:hover, .booking:hover {
+	background:#F0F8FF;
+	border:1px solid black;
+	a {
+		color:black;
+		text-shadow:2px 2px white;
+	}
+}
+
+// Button Styling ends
+
+// Header and nav styling
+.blushimg {
+	float:left;
+}
+
+nav {
+	background:black;
+}
+.headermenu {
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	li {
+		padding:8px;
+		position:relative;	
+	}
+		a{
+			font-size:1.6rem;
+			text-transform:uppercase;
+			color:white;
+			text-shadow:1px 1px gray;
+			letter-spacing:1px;
+		}
+	}
+
+.submenu {
+	margin:0;
+	padding:5px 0;
+	display:none;
+	position:absolute;
+	top:34px;
+	left:0;
+	background:silver;
+	color:white;
+	font-size:1.3rem;
+	text-transform:capitalize;
+}
+
+.headermenu li:hover a{
+	background-color:silver;
+}
+
+.fa-bars {
+	display:none;
+	font-size:3rem;
+	color:#24292d;
+}
+
+.headermenu li:hover{
+	background-color:silver;
+}
+
+.headermenu li:hover ul.submenu {
+	z-index:9999;
+	display:block;
+}
+
+// Carousel styling
+
+.coverimage {
+	width:100%;
+	height:600px;
+	object-fit:cover;
+}
+
+.carousel{
+	position:relative;
+}
+
+.imagecopy {
+	position:absolute;
+	top:40%;
+	left:10%;
+	z-index:999;
+}
+
+.aboutcontent {
+	padding-top:5%;
+	text-align:center;
+	margin:5% 10%;
+	p {
+		line-height:1.5;
+	}
+}
+// Image Carousel styling ends
+
+// About section styling 
+
+.model, .aboutcopy {
+	width:50%;
+	float:left
+}
+
+.aboutcopy {
+	padding-left:5%;
+}
+.modelimg {
+	width:100%;
+	border:3px solid pink;
+}
+
+.welcomecopy {
+	padding-right:20px;
+	padding-top:15px;
+	margin-top:0;
+}
+
+.welcome, .offer{
+	font-family:'Great Vibes', sans-serif;
+	font-size:6rem;
+	text-transform:capitalize;
+	color:rgb(255,105,180);
+	text-shadow:1px 1px gray;
+	margin-bottom:3px;
+}
+
+.subhead {
+	text-align:center;
+}
+// About section styling ends 
+
+// Information styling begins
+
+.information {
+	padding-bottom:10%;
+}
+
+.information img {
+	border: 3px solid pink;
+}
+
+.yourskin, .services, .promotions {
+	width:calc(33.3% - 20px);
+	float:left;
+	margin:10px;
+	text-align:center;
+}
+
+.services p, .yourskin p {
+	padding-top:40px;
+}
+// Information styling ends
+
+// Main footer styling
+footer {
+	background:#24292d;
+}
+
+footer p {
+	font-size:1.4rem;
+	color:white;
+}
+
+.footerinfo {
+	margin-bottom:5%;
+	padding-left:5%;
+}
+.location, .time, .contactinfo {
+	width:33.3%;
+	float:left;
+}
+// Main footer styling ends
+
+// Location styling
+
+.city, .postalcode {
+	padding-left:18px;
+	margin:10px 0px;
+}
+
+.map {
+	width:90%;
+}
+
+.mapmarker {
+	padding-top:5px;
+}
+
+// Location styling ends
+
+// Icon footer styling
+.follow {
+	padding-top:40px;
+}
+.footer-firstline {
+	display:inline-block;
+	margin:0;
+}
+.socialicons {
+	font-size:2.5rem;
+	a {
+		text-decoration:none;
+		color:rgba(255,215,0,0.9);
+		display:inline-block;
+		padding:5px;
+	}
+}
+.logo {
+	font-size:2rem;
+	color:rgba(255,215,0,0.9);
+	padding-right:3px;
+	display:inline-block;
+}
+
+// Time styling
+
+.saturday, .sunday {
+	padding-left:23px;
+	margin:12px 0px;
+}
+
+// Phone and email styling
+
+.footer-firstline a {
+	color:white;
+}
+.phone {
+	font-size:1.5rem;
+}
+
+.email {
+	display:inline-block;
+}
+
+.phonenumber {
+	padding-top:12px;
+}
+// Phone and email styling ends
+
+// Social Media styling
+.icon {
+	transition: all 0.2s ease-in;
+}
+.icon:hover{
+  transform:scale(1.5)
+}
+// Social Media styling ends
+
+// Email form styling
+
+.emailform {
+	padding-top:20px;
+}
+.emaillabel {
+	font-size:1.6rem;
+	color:$secondary;
+}
+
+.submit {
+	display:inline-block;
+	padding:10px 20px;
+	background:rgb(65,105,225);
+	margin-left:10px;
+	font-family:'Lora', sans-serif;
+	font-size:1.4rem;
+	font-weight:bold;
+	color:$secondary;
+	text-shadow:1px 1px black;
+	border:1px solid silver;
+}
+
+.submit:hover {
+	background:#F0F8FF;
+	color:black;
+	text-shadow:2px 2px white;
+}
+
+.emailinput {
+	display:inline-block;
+	width:180px;
+	padding:14px 5px;
+	background:lightblue;
+	border:1px solid black;
+	font-size:1.3rem;
+	font-family:'Lora', sans-serif;
+	color:black;
+}
+
+// Copyright statement styling
+.copyright {
+	background:$primary;
+	.copyrightstatement {
+		font-size:1rem;
+		font-style:normal;
+		padding-top:5px;
+		padding-bottom:5px;
+		padding-left:5%;
+		margin:0;
+		text-shadow:1px 1px black;
+	}
+}
+
+// Booking Appointment Page Styling 
+.bookingtitle {
+	font-size:4rem;
+	color:$secondary;
+	font-family:'Lora', sans-serif;
+	padding-top:20px;
+}
+
+.bookingsubhead {
+	margin-top:10px;
+	margin-bottom:0;
+	font-size:2rem;
+	font-family:'Oswald', sans-serif;
+	color:lightblue;
+}
+.bookingPage {
+	background:#24292d;
+	border-bottom:4px solid gray;
+	padding-right:5%;
+	padding-left:5%;
+}
+.appointmentform {
+	padding:30px 0px 60px;
+}
+.bookingform {
+	padding-top:10px;
+	border:3px solid gray;
+	width:80%;
+	background:linear-gradient( 45deg, gray, black);
+}
+
+.bookingform div {
+	padding-bottom:30px;
+	padding-left:25px;
+}
+.bookingform label {
+	display:block;
+}
+
+.bookingform input {
+	border:1px solid black;
+}
+.appointmentform {
+	font-size:1.6rem;
+	color:$secondary;
+	letter-spacing:2px;
+}
+
+.commentBox {
+	width:70%;
+	height:200px;
+}
+
+.appointmentSubmit {
+	color:white;
+	text-shadow:1px 1px black;
+	background:$primary;
+	font-family:'Lora', sans-serif;
+	padding:10px 20px;
+	border:1px solid black;
+}
+
+.appointmentSubmit:hover {
+	background:#F0F8FF;
+	color:black;
+	text-shadow:2px 2px white;
+}
+// Booking Appointment Page Styling Ends
+
+@media (max-width: 940px) {
+	
+	// About section styling
+	.model {
+		width:100%;
+	}
+
+	.modelimg {
+		width:75%;
+	}
+	.aboutcopy {
+		width:100%;
+	}
+	
+	// Footer Styling
+	.footerinfo {
+		padding-left:8%;
+		padding-right:8%;
+	}
+	.location, .time {
+		width:50%;
+		float:left;
+		padding-bottom:30px;
+		border-bottom:2px solid silver;
+	}
+	
+	.time {
+		padding-left:25px;
+	}
+
+	.location {
+		padding-bottom:39px;
+	}
+
+	.contactinfo {
+		width:100%;
+	}
+
+	.contactcopy, .socialmedia {
+		border-bottom:2px solid silver;
+		padding:10px 0px 30px;
+		text-align:center;
+	}
+
+	.emailform, .copyrightstatement {
+		text-align:center;
+	}
+
+	// Booking Appointment Form Styling
+	.bookingform {
+		width:100%;
+	}
+
+	.bookingsubhead {
+		text-align:center;
+	}
+
+	.commentBox {
+		width:400px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	// Carousel styling
+	.coverimage {
+		height:500px;
+	}
+	
+	h1 {
+		font-size:4rem;
+		text-align:center;
+	}
+
+	.carousel {
+		position:relative;
+	}
+	
+	.imagecopy {
+		position:absolute;
+		top:40%;
+		width:80%;
+	}
+
+	.imagesubhead {
+		font-size:2rem;
+		text-align:center;
+	}
+	
+	.button:nth-of-type(1) {
+		display:block;
+		margin:auto;
+		width:200px;
+		text-align:center;
+		padding:10px 10px;
+		a {
+			font-size:1.6rem;
+		}
+	}
+
+	.fa-bars {
+		font-size:4rem;
+		display:inline-block;
+		position:absolute;
+		top:4%;
+		right:5%;
+	}
+	
+	nav{
+		display:none;
+	}
+
+	nav.active {
+		display:block;
+		position:relative;
+		background:gray;
+		.headermenu{
+			float:right;
+			display:block;
+			position:absolute;
+			text-align:right;
+			right:0;
+			z-index:9999;
+			background:black;
+			width:40%;
+		}
+	}
+
+	.booking {
+		display:none;
+	}
+
+	.aboutcopy, .yourskin, .services, .promotions, .map {
+		width:100%;
+	}
+
+	.services, .yourskin {
+		padding-bottom:80px;
+	}
+
+	.information{
+		padding-right:5%;
+	}
+	
+	.services p, .yourskin p {
+		padding-top:0px;
+	}	
+
+	.location, .time, .contactinfo{
+		padding-bottom:5%; 
+		padding-left:0;
+		border-bottom:2px solid silver;
+		width:100%;
+		text-align:center;
+		.address{
+		text-align:center;	
+		}
+	}
+	// Booking Appoointment Form
+	.commentBox {
+		width:350px;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	section:not(.carousel){
+		padding-right:5%;
+		padding-left:5%;
+	}
+	.blushimg {
+		width:40vw;
+	}
+
+	h1 {
+		font-size:3rem;
+	}
+
+	h3 {
+		font-size:1.8rem;
+	}
+	
+	.fa-bars {
+		font-size:3rem;
+		top:2%;
+		right:5%;
+	}
+	.hamburger{
+		display:inline-block;
+		position:absolute;
+		top:3%;
+		right:5%;
+	}
+	.fa-bars:hover .headermenu li {
+		display:inline-block;
+	}
+	
+	.coverimage {
+		width:100vw;
+		height:350px;
+	}
+
+	.about {
+		padding-top:40px;
+	}
+	
+	.location, .time, .contactinfo{
+		padding-bottom:5%;
+		padding-left:0;
+		border-bottom:2px solid silver;
+		width:100%;
+		text-align:center;
+		.address{
+		text-align:center;	
+		}
+	}
+
+	.emailaddress {
+		text-align:center;
+	}
+
+	// Booking Appoointment Form
+	.commentBox {
+		width:300px;
+	}
+}
+
